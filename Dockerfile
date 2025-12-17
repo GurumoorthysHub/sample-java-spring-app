@@ -1,7 +1,7 @@
 FROM eclipse-temurin:8-jdk
 
 # Required for starting application
-RUN apk update && apk add /bin/sh
+RUN apt-get update && apt-get install -y bash
 
 RUN mkdir -p /opt/app
 ENV PROJECT_HOME /opt/app
